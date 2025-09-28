@@ -1,31 +1,21 @@
-from faker import Faker
+# FakerUser
 
-fake = Faker("es_MX")  # Datos realistas de México
+## Descripción
+**FakerUser** es un script en Python 3.10.11 que genera usuarios ficticios con datos realistas de México utilizando la librería [Faker](https://faker.readthedocs.io/). Cada usuario generado incluye:
 
-cantidad_usuarios = 1000
+- Nombre completo
+- Correo electrónico (con dominio `hotmail.com`)
+- Teléfono
+- Dirección
 
-for i in range(cantidad_usuarios):
-    # Generar nombre y apellido
-    nombre = fake.first_name()
-    apellido = fake.last_name()
-    
-    # Crear correo con hotmail.com
-    correo = f"{nombre.lower()}.{apellido.lower()}@hotmail.com"
-    
-    # Crear usuario
-    usuario = {
-        "nombre": f"{nombre} {apellido}",
-        "correo": correo,
-        "telefono": fake.phone_number(),
-        "direccion": fake.address()
-    }
-    
-    # Imprimir verticalmente
-    print(f"Usuario {i+1}:")
-    print("Nombre:", usuario["nombre"])
-    print("Correo:", usuario["correo"])
-    print("Teléfono:", usuario["telefono"])
-    print("Dirección:", usuario["direccion"])
-    print("-" * 0)  # Separador
+El proyecto está pensado para prácticas de generación de datos, pruebas de software o demostraciones de bases de datos y sistemas que requieren datos de ejemplo.
 
-    
+## Tecnologías utilizadas
+- Python 3.10.11
+- [Faker](https://faker.readthedocs.io/)
+- Terminal / Consola
+
+## Cómo ejecutar
+1. Clona este repositorio:  
+   ```bash
+   git clone https://github.com/tu_usuario/FakerUser.git
